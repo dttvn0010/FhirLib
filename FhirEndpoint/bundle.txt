@@ -1,0 +1,262 @@
+{
+  "resourceType": "Bundle",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "9fabae52-06fd-43aa-9525-f3b35b4bcc2c",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-04-06T19:55:23.736+07:00"
+        },
+        "extension": [
+          {
+            "url": "https://fhir.emr.com.vn/StructureDefinition/Extension-Race-v1.0",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://teminology.emr.com.vn/CodeSystem/DanhMuc-DanToc-v1.0",
+                  "code": "1",
+                  "display": "Kinh"
+                }
+              ],
+              "text": "Kinh"
+            }
+          },
+          {
+            "url": "https://fhir.emr.com.vn/StructureDefinition/Extension-EmploymentTitle-v1.0",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://teminology.emr.com.vn/CodeSystem/DanhMuc-NgheNghiep-v1.0",
+                  "code": "7",
+                  "display": "Thợ May"
+                }
+              ],
+              "text": "Thợ May"
+            }
+          }
+        ],
+        "modifierExtension": [
+          {
+            "url": "https://fhir.emr.com.vn/StructureDefinition/Extension-Nationality-v1.0",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://teminology.emr.com.vn/CodeSystem/DanhMuc-QuocGia-v1.0",
+                  "code": "VNM",
+                  "display": "Việt Nam"
+                }
+              ],
+              "text": "Việt Nam"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "system": "https://fhir.emr.vn.com/Idhis",
+            "value": "100111001"
+          }
+        ],
+        "name": [
+          {
+            "text": "TRẦN THỊ THÙY TRANG"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1973-12-31",
+        "address": [
+          {
+            "extension": [
+              {
+                "url": "https://fhir.emr.com.vn/StructureDefinition/Extension-DiaDanhHanhChinh-v1.0",
+                "extension": [
+                  {
+                    "url": "city",
+                    "valueCodeableConcept": {
+                      "coding": [
+                        {
+                          "system": "https://fhir.emr.com.vn/DiaDdanhHanhChinh-v1.0",
+                          "code": "92",
+                          "display": "Cần Thơ"
+                        }
+                      ],
+                      "text": "Cần Thơ"
+                    }
+                  },
+                  {
+                    "url": "district",
+                    "valueCodeableConcept": {
+                      "coding": [
+                        {
+                          "system": "https://fhir.emr.com.vn/DiaDdanhHanhChinh-v1.0",
+                          "code": "916",
+                          "display": "Quận Ninh Kiều"
+                        }
+                      ],
+                      "text": "Quận Ninh Kiều"
+                    }
+                  },
+                  {
+                    "url": "ward",
+                    "valueCodeableConcept": {
+                      "coding": [
+                        {
+                          "system": "https://fhir.emr.com.vn/DiaDdanhHanhChinh-v1.0",
+                          "code": "31150",
+                          "display": "Phường An Bình"
+                        }
+                      ],
+                      "text": "Phường An Bình"
+                    }
+                  }
+                ]
+              }
+            ],
+            "text": "143/3 kv5, Phường An Bình, Quận Ninh Kiều, Cần Thơ",
+            "line": [
+              "143/3 kv5, Phường An Bình, Quận Ninh Kiều, Cần Thơ"
+            ],
+            "city": "Cần Thơ",
+            "district": "Quận Ninh Kiều"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "9f3d2079-9075-43e7-a919-949283a6c492",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-04-06T19:55:30.518+07:00"
+        },
+        "identifier": [
+          {
+            "system": "https://fhir.emr.vn.com/HSBA",
+            "value": "20075995"
+          }
+        ],
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "https://fhir.emr.vn.com/LOAI_BENH_AN-v1.0",
+                "code": "03",
+                "display": "Truyền nhiễm"
+              }
+            ],
+            "text": "Truyền nhiễm"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/9fabae52-06fd-43aa-9525-f3b35b4bcc2c"
+        },
+        "period": {
+          "start": "2020-03-05T20:52:54+07:00",
+          "end": "2020-03-17T00:00:00+07:00"
+        },
+        "serviceProvider": {
+          "reference": "Organization/7f3f3cbe-ba8c-4fc0-a26f-347f8f5c536a"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "028e2fd1-4e8b-4c84-8275-c600e7eb5c79",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-04-06T19:55:45.588+07:00"
+        },
+        "basedOn": [
+          {
+            "reference": "ServiceRequest/577ca50e-6526-4738-a0aa-bd8005df845e"
+          }
+        ],
+        "category": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/ValueSet/diagnostic-service-sections",
+              "code": "LAB",
+              "display": "Laboratory"
+            }
+          ],
+          "text": "Laboratory"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "https://fhir.emr.com.vn/CodeSystem/DMDVKyThuat",
+              "code": "23.0166.1494",
+              "display": "Urea"
+            }
+          ],
+          "text": "Urea"
+        },
+        "subject": {
+          "reference": "Patient/9fabae52-06fd-43aa-9525-f3b35b4bcc2c"
+        },
+        "encounter": {
+          "reference": "Encounter/9f3d2079-9075-43e7-a919-949283a6c492"
+        },
+        "performedDateTime": "2020-03-12T10:50:21+07:00",
+        "asserter": {
+          "display": "Bác sĩ CK1 Nguyễn Thị Huỳnh Nga"
+        },
+        "report": [
+          {
+            "reference": "DiagnosticReport/2d86bdd0-ddd3-4e37-8148-b9acd86cf0f6"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "id": "577ca50e-6526-4738-a0aa-bd8005df845e",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2020-04-06T19:55:45.585+07:00"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/diagnostic-service-sections",
+                "code": "LAB",
+                "display": "Laboratory"
+              }
+            ],
+            "text": "Laboratory"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "https://fhir.emr.com.vn/CodeSystem/DMDVKyThuat",
+              "code": "23.0166.1494",
+              "display": "Urea"
+            }
+          ],
+          "text": "Urea"
+        },
+        "orderDetail": [
+          {
+            "text": "Viêm màng não vi khuẩn, không biệt định"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/9fabae52-06fd-43aa-9525-f3b35b4bcc2c"
+        },
+        "encounter": {
+          "reference": "Encounter/9f3d2079-9075-43e7-a919-949283a6c492"
+        },
+        "authoredOn": "2020-03-12T08:49:18+07:00",
+        "requester": {
+          "display": "Bác sĩ CK1 Lâm Tân Phương"
+        }
+      }
+    }
+  ]
+}

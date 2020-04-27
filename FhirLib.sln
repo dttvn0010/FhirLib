@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FhirEndpoint", "FhirEndpoint\FhirEndpoint.csproj", "{6B68C607-5169-4F4D-AFC8-60957A00B3DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageConverter", "MessageConverter\MessageConverter.csproj", "{7EDDF523-2BC7-47AA-A99D-84BCB765E2D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LightJson", "LightJson\LightJson.csproj", "{3BC85E8B-8A37-4015-B4A8-2D973F8622F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FhirClient", "FhirClient\FhirClient.csproj", "{26BC6E21-950A-4F4B-BC41-ACBB91FD8687}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B68C607-5169-4F4D-AFC8-60957A00B3DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B68C607-5169-4F4D-AFC8-60957A00B3DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B68C607-5169-4F4D-AFC8-60957A00B3DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B68C607-5169-4F4D-AFC8-60957A00B3DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EDDF523-2BC7-47AA-A99D-84BCB765E2D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EDDF523-2BC7-47AA-A99D-84BCB765E2D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EDDF523-2BC7-47AA-A99D-84BCB765E2D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EDDF523-2BC7-47AA-A99D-84BCB765E2D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BC85E8B-8A37-4015-B4A8-2D973F8622F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BC85E8B-8A37-4015-B4A8-2D973F8622F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BC85E8B-8A37-4015-B4A8-2D973F8622F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BC85E8B-8A37-4015-B4A8-2D973F8622F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26BC6E21-950A-4F4B-BC41-ACBB91FD8687}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26BC6E21-950A-4F4B-BC41-ACBB91FD8687}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26BC6E21-950A-4F4B-BC41-ACBB91FD8687}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26BC6E21-950A-4F4B-BC41-ACBB91FD8687}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
