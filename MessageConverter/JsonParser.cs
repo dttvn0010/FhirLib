@@ -28,7 +28,7 @@ namespace MessageConverter
             var serviceRequest = resources.Where(x => x["resourceType"].AsString == "ServiceRequest")
                                         .First();
 
-            dvkt.DmDichVu = DanhMuc.FromConcept(serviceRequest.AsJsonObject["code"]);
+            dvkt.DmDichVu = DanhMuc.FromCodeableConcept(serviceRequest.AsJsonObject["code"]);
             var orderDetails = serviceRequest["orderDetail"].AsJsonArray;
             if (orderDetails != null && orderDetails.Count > 0)
             {

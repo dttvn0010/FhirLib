@@ -25,7 +25,7 @@ namespace FhirClient
             return builder.ToString();
         }
 
-        public static string get(string url, Dictionary<string, string> param)
+        public static string get(string url, Dictionary<string, string> param=null)
         {
             HttpClient client = new HttpClient();
             if (param != null)

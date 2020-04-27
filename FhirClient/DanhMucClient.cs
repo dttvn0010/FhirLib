@@ -32,6 +32,31 @@ namespace FhirClient
             return null;
         }
 
+        /// - Lấy toàn bộ danh mục trong một nhóm
+        /// - Input:
+        ///     + maNhom: string - mã nhóm danh mục, lấy trong Constants.CodeSystem
+        ///     
+        ///  - Output:
+        ///     + dsDanhMuc: List<DanhMuc> - Toàn bộ Danh Mục trong nhóm
+        public List<DanhMuc> GetDanhMucByGroup(string maNhom)
+        {
+            string codeSytemId = GetCodeSystemId(maNhom);
+            List<DanhMuc> dsDanhMuc = new List<DanhMuc>();
+            if(codeSytemId != null)
+            {
+                string url = Constants.FHIR_URL + "/CodeSystem/" + codeSytemId;
+                var json = FhirClientUtils.get(url);
+                var obj = JsonValue.Parse(json);
+                var concepts = obj["concept"].AsJsonArray;
+                foreach(var concept in concepts)
+                {
+                    dsDanhMuc.Add(DanhMuc.FromConcept(maNhom, concept));
+                }
+
+            }
+            return dsDanhMuc;
+        }
+
         /// - Lấy danh mục theo mã nhóm và mã
         /// - Input:
         ///     + maNhom: string - mã nhóm danh mục, lấy trong Constants.CodeSystem

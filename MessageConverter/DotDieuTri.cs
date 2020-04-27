@@ -35,7 +35,7 @@ namespace MessageConverter
                     {
                         if (type["system"].AsString == Constants.CodeSystem.KHOA_DIEU_TRI)
                         {
-                            DmKhoaDieuTri = DanhMuc.FromConcept(type);
+                            DmKhoaDieuTri = DanhMuc.FromCodeableConcept(type);
                         }
                     }
                 }

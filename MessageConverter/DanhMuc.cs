@@ -42,7 +42,7 @@ namespace MessageConverter
             return dm;
         }
 
-        public static DanhMuc FromConcept(JsonValue concept)
+        public static DanhMuc FromCodeableConcept(JsonValue concept)
         {
             var codings = concept["coding"].AsJsonArray;
 
@@ -52,6 +52,36 @@ namespace MessageConverter
             }
 
             return new DanhMuc(); ;
+        }
+
+        private static Object GetPropertyValue(JsonObject obj)
+        {
+            if (obj["valueString"].AsString != null)
+            {
+                return obj["valueString"].AsString;
+            }
+
+            if (obj["valueInteger"].AsString != null)
+            {
+                return obj["valueInteger"].AsInteger;
+            }
+
+            if (obj["valueBoolean"].AsString != null)
+            {
+                return obj["valueBoolean"].AsBoolean;
+            }
+
+            if (obj["valueDecimal"].AsString != null)
+            {
+                return obj["valueDecimal"].AsNumber;
+            }
+
+            if (obj["valueDateTime"].AsString != null)
+            {
+                return obj["valueDateTime"].AsDateTime;
+            }
+
+            return null;
         }
 
         public static DanhMuc FromParams(string maNhom, JsonArray paramArr)
@@ -77,37 +107,34 @@ namespace MessageConverter
                     foreach (var part in parts)
                     {
                         string ma = part["name"].AsString;
-                        Object giaTri = null;
+                        Object giaTri = GetPropertyValue(part);
 
-                        if (ma == "slug") continue;
-
-                        if (part["valueString"].AsString != null)
+                        if (ma != "slug")
                         {
-                            giaTri = part["valueString"].AsString;
+                            dm.DsThuocTinh.Add(new ThuocTinh(ma, giaTri));
                         }
-
-                        if (part["valueInteger"].AsString != null)
-                        {
-                            giaTri = part["valueInteger"].AsInteger;
-                        }
-
-                        if (part["valueBoolean"].AsString != null)
-                        {
-                            giaTri = part["valueBoolean"].AsBoolean;
-                        }
-
-                        if (part["valueDecimal"].AsString != null)
-                        {
-                            giaTri = part["valueDecimal"].AsNumber;
-                        }
-
-                        if (part["valueDateTime"].AsString != null)
-                        {
-                            giaTri = part["valueDateTime"].AsDateTime;
-                        }
-
-                        dm.DsThuocTinh.Add(new ThuocTinh(ma, giaTri));
                     }
+                }
+            }
+
+            return dm;
+        }
+
+        public static DanhMuc FromConcept(String maNhom, JsonObject concept)
+        {
+            var dm = new DanhMuc();
+            dm.MaNhom = maNhom;
+            dm.Ma = concept["code"].AsString;
+            dm.Ten = concept["display"].AsString;
+
+            var properties = concept["property"].AsJsonArray;
+            foreach(var property in properties)
+            {
+                string ma = property["code"].AsString;
+                Object giaTri = GetPropertyValue(property);
+                if(ma != "slug")
+                {
+                    dm.DsThuocTinh.Add(new ThuocTinh(ma, giaTri));
                 }
             }
 
