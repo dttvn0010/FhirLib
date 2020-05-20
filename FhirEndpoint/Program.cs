@@ -18,7 +18,12 @@ namespace FhirEndpoint
             reader.Close();
 
             DichVuKyThuat dvkt = JsonParser.parseDVKTMessage(json);
-            Console.WriteLine(dvkt);
+            Console.WriteLine("Benh nhan:" + dvkt.BenhNhan.IdHis);
+            Console.WriteLine("Ma benh an:" + dvkt.DotDieuTri.MaYte);
+            Console.WriteLine("Bac si yeu cau:" + dvkt.BacSiYeuCau.Ten + "(" + dvkt.BacSiYeuCau.ChungChiHanhNghe + ")");
+            Console.WriteLine("Noi dung yeu cau:" + dvkt.NoiDungYeuCau);
+            Console.WriteLine("Ngay yeu cau:" + dvkt.NgayYeuCau);
+            Console.WriteLine("Dich vu ky thuat:" + dvkt.DmDichVu.Ten + "(" + dvkt.DmDichVu.Ma + ")");
         }
     }
 }
