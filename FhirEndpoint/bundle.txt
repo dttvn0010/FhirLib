@@ -60,11 +60,11 @@
         ],
         "name": [
           {
-            "text": "TRẦN THỊ THÙY TRANG"
+            "text": "Nguyễn Văn A"
           }
         ],
-        "gender": "female",
-        "birthDate": "1973-12-31",
+        "gender": "male",
+        "birthDate": "1945-01-01",
         "address": [
           {
             "extension": [
