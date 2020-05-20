@@ -55,7 +55,7 @@
         "identifier": [
           {
             "system": "https://fhir.emr.vn.com/Idhis",
-            "value": "100111001"
+            "value": "30000202"
           }
         ],
         "name": [
@@ -134,7 +134,7 @@
         "identifier": [
           {
             "system": "https://fhir.emr.vn.com/HSBA",
-            "value": "20075995"
+            "value": "19700207"
           }
         ],
         "type": [
@@ -202,7 +202,7 @@
         },
         "performedDateTime": "2020-03-12T10:50:21+07:00",
         "asserter": {
-          "display": "Bác sĩ CK1 Nguyễn Thị Huỳnh Nga"
+          "display": "Bác sĩ CK1 Nguyễn Thị Huỳnh Nga",
         },
         "report": [
           {
@@ -254,7 +254,8 @@
         },
         "authoredOn": "2020-03-12T08:49:18+07:00",
         "requester": {
-          "display": "Bác sĩ CK1 Lâm Tân Phương"
+          "display": "Bác sĩ CK1 Lâm Tân Phương",
+          "identifier" : {"value": "003642"}
         }
       }
     }
