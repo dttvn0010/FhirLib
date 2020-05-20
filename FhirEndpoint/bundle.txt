@@ -202,7 +202,7 @@
         },
         "performedDateTime": "2020-03-12T10:50:21+07:00",
         "asserter": {
-          "display": "Bác sĩ CK1 Nguyễn Thị Huỳnh Nga",
+          "display": "Bác sĩ CK1 Nguyễn Thị Huỳnh Nga"
         },
         "report": [
           {
